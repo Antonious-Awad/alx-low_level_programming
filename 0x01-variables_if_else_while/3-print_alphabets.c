@@ -1,17 +1,19 @@
 #include <stdio.h>
 /**
- * main - entry point
+ * main - Entry Point
  *
- * return: always 0
+ * Return: always 0
  */
 
 int main(void)
 {
-	for (char c = 'a'; c <= 'z'; c++)
+	char c;
+
+	for (c = 'a'; c <= 'z'; c++)
 	{
 		putchar(c);
 	}
-	for (char c = 'a'; c <= 'z'; c++)
+	for (c = 'a'; c <= 'z'; c++)
 	{
 		putchar(c);
 	}
