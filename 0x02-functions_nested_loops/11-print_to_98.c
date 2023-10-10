@@ -15,13 +15,13 @@ void print_to_98(int n)
 	case 0:
 		for (i = n; i <= 98; i++)
 		{
-			i == 98 ? printf("%d", i) : printf("%d, ", i);
+			i == 98 ? printf("%d\n", i) : printf("%d, ", i);
 		}
 		break;
 	case 1:
 		for (i = n; i >= 98; i--)
 		{
-			i == 98 ? printf("%d", i) : printf("%d, ", i);
+			i == 98 ? printf("%d\n", i) : printf("%d, ", i);
 		}
 
 	default:
