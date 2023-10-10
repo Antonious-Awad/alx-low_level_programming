@@ -14,18 +14,23 @@ void times_table(void)
 		{
 			int prod = i * j;
 
-			if (j != 0 && j != 9)
+			if (j == 0)
 			{
-				if (prod <= 9)
-				{
-					printf(",  ");
-				}
-				else
-				{
-					printf(", ");
-				}
+				_putchar('0');
 			}
-			printf("%d", prod);
+			else if (prod <= 9)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(prod + '0');
+			}
+			else
+			{
+				_putchar(',');
+				_putchar(' ');
+				printf("%d", prod);
+			}
 		}
 		_putchar('\n');
 	}
