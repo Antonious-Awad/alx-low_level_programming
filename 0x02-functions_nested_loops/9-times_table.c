@@ -14,7 +14,7 @@ void times_table(void)
 		{
 			int prod = i * j;
 
-			if (j != 0 || j != 9)
+			if (j != 0 && j != 9)
 			{
 				if (prod <= 9)
 				{
