@@ -7,6 +7,7 @@
 int _isdigit(int c)
 {
 	char chrcter = c;
+
 	if (chrcter <= '9' && chrcter >= '0')
 		return (1);
 	else
