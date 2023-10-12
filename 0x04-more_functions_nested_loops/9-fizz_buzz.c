@@ -31,6 +31,10 @@ int main(void)
 		{
 			putchar(' ');
 		}
+		else
+		{
+			putchar('\n');
+		}
 	}
 	return (0);
 }
