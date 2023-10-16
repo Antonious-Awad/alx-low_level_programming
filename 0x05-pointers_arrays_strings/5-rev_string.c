@@ -14,7 +14,7 @@ void rev_string(char *s)
 
 	while (start != '\0')
 	{
-		swap_int(s[start], s[end]);
+		swap_int(s[start] + 0, s[end] + 0);
 		end--;
 		start++;
 	}
