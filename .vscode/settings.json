@@ -1,5 +1,8 @@
 {
 	"editor.comments.insertSpace": false,
 	"editor.detectIndentation": false,
-  "editor.insertSpaces": false
+	"editor.insertSpaces": false,
+	"files.associations": {
+		"main.h": "c"
+	}
 }
