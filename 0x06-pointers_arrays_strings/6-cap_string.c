@@ -10,12 +10,20 @@ char *cap_string(char *s)
 {
 	int i;
 
+	int newWord = 1;
+
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (i == 0)
+
+		if (newWord && s[i] >= 'a' && s[i] <= 'z')
+		{
 			s[i] = toupper(s[i]);
-		if ((s[i] == ' ' || s[i] == '\n' || s[i] == '.') && s[i + 1] != '\0')
-			s[i + 1] = toupper(s[i + 1]);
+			newWord = 0;
+		}
+		if (s[i] == '0' || s[i] == '.' || s[i] == '\n')
+		{
+			newWord = 1;
+		}
 	}
 	return (s);
 }
