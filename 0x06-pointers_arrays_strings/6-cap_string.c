@@ -17,7 +17,9 @@ char *cap_string(char *s)
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (newWord && ((s[i] >= 'a' && s[i] <= 'z') || (s[i] >= 'A' && s[i] <= 'Z')))
+		if (newWord
+		&& ((s[i] >= 'a' && s[i] <= 'z')
+		|| (s[i] >= 'A' && s[i] <= 'Z')))
 		{
 			s[i] = toupper(s[i]);
 			newWord = 0;
