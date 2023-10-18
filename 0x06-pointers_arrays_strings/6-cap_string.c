@@ -8,7 +8,7 @@
 
 char *cap_string(char *s)
 {
-	int i;
+	int i, j;
 
 	int newWord = 1;
 
@@ -23,7 +23,8 @@ char *cap_string(char *s)
 			s[i] = toupper(s[i]);
 			newWord = 0;
 		}
-		for (int j = 0; j < 13; j++)
+
+		for (j = 0; j < 13; j++)
 			if (s[i] == capArr[j])
 			{
 				newWord = 1;
