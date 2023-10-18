@@ -12,6 +12,9 @@ char *cap_string(char *s)
 
 	int newWord = 1;
 
+	char capArr[13] = {'\n', '\t', ' ', '.', ',', ';', ',', '!', '?', '(',
+										 ')', '{', '}'};
+
 	for (i = 0; s[i] != '\0'; i++)
 	{
 
@@ -20,10 +23,12 @@ char *cap_string(char *s)
 			s[i] = toupper(s[i]);
 			newWord = 0;
 		}
-		if (s[i] == '0' || s[i] == '.' || s[i] == '\n')
-		{
-			newWord = 1;
-		}
+		for (int j = 0; j < 13; j++)
+			if (s[i] == capArr[j])
+			{
+				newWord = 1;
+				break;
+			}
 	}
 	return (s);
 }
