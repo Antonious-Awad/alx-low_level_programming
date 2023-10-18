@@ -22,6 +22,7 @@ char *cap_string(char *s)
 		{
 			s[i] = toupper(s[i]);
 			newWord = 0;
+			continue;
 		}
 
 		for (j = 0; j < 13; j++)
