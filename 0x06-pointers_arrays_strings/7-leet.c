@@ -5,22 +5,22 @@
  * Return: encoded string
  */
 
-char *leet(char *s)
+char *
+leet(char *s)
 {
-	int i;
+	int i, j;
+
+	char vowels[20] = "a4A4e3E3o0O0t7T7l1L1";
 
 	for (i = 0; s[i] != '\0'; i++)
+	{
+		for (j = 0; vowels[j] != '\0'; j++)
 		{
-			if (s[i] == 'a' || s[i] == 'A'
-						|| s[i] == 'e' || s[i] == 'E'
-						|| s[i] == 'o' || s[i] == 'O'
-						|| s[i] == 't' || s[i] == 'T'
-						|| s[i] == 'l' || s[i] == 'L')
-				{
-					enum vowels v = s[i];
-
-					s[i] = v + '0';
-					}
+			if (s[i] == vowels[j] && !(s[i] >= '0' && s[i] <= '9'))
+			{
+				s[i] = vowels[j + 1];
+			}
 		}
+	}
 	return (s);
 }
