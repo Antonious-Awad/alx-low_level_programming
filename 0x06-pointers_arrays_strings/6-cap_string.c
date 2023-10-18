@@ -23,6 +23,8 @@ char *cap_string(char *s)
 			newWord = 0;
 			continue;
 		}
+		if (s[i] >= '0' && s[i] <= '9')
+			newWord = 0;
 
 		for (j = 0; j < 13; j++)
 			if (s[i] == capArr[j])
