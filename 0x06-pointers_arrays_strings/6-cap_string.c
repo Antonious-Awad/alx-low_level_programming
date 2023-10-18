@@ -14,7 +14,7 @@ char *cap_string(char *s)
 	{
 		if (i == 0)
 			s[i] = toupper(s[i]);
-		if (s[i] == ' ')
+		if ((s[i] == ' ' || s[i] == '\n' || s[i] == '.') && s[i + 1] != '\0')
 			s[i + 1] = toupper(s[i + 1]);
 	}
 	return (s);
