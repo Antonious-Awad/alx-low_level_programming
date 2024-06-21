@@ -1,8 +1,9 @@
 {
-	"editor.comments.insertSpace": false,
-	"editor.detectIndentation": false,
-	"editor.insertSpaces": false,
-	"files.associations": {
-		"main.h": "c"
-	}
+  "C_Cpp.clang_format_fallbackStyle": "Visual Studio",
+  "editor.comments.insertSpace": false,
+  "editor.detectIndentation": false,
+  "editor.insertSpaces": false,
+  "files.associations": {
+    "main.h": "c"
+  }
 }
