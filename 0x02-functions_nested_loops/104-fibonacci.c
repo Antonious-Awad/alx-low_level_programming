@@ -7,8 +7,8 @@
 
 int main(void)
 {
-	unsigned long int f1 = 1, f2 = 2, i;
-	unsigned long int next = f1 + f2;
+	unsigned long long f1 = 1, f2 = 2, i;
+	unsigned long long next = f1 + f2;
 
 	printf("%lu, %lu, ", f1, f2);
 	for (i = 3; i <= 98; i++)
