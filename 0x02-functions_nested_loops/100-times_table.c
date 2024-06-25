@@ -6,15 +6,16 @@
 
 void print_times_table(int n)
 {
+	int i, j;
 
 	if (n < 0 || n > 15)
 	{
 		return;
 	}
 
-	for (int i = 0; i < n; i++)
+	for (i = 0; i < n; i++)
 	{
-		for (int j = 0; j < n; j++)
+		for (j = 0; j < n; j++)
 		{
 			int prod = i * j;
 
@@ -38,14 +39,11 @@ void print_times_table(int n)
 			}
 			else
 			{
-				int digit1 = prod % 10;
-				int digit2 = (prod % 100) / 10;
-				int digit3 = prod / 100;
 				_putchar(',');
 				_putchar(' ');
-				_putchar(digit3 + '0');
-				_putchar(digit2 + '0');
-				_putchar(digit1 + '0');
+				_putchar(prod / 100 + '0');
+				_putchar((prod % 100) / 10 + '0');
+				_putchar(prod % 10 + '0');
 			}
 		}
 		_putchar('\n');
