@@ -14,12 +14,14 @@ int main(void)
 	printf("%lu, %lu, ", f1, f2);
 	for (i = 3; i <= 50; i++)
 	{
-		printf("%lu, ", next);
-		f1 = f2;
-		f2 = next;
-		next = f1 + f2;
 		if (i == 50)
-			printf("\n");
+			printf("%lu\n", next);
+		else
+		{
+			printf("%lu, ", next);
+			f1 = f2;
+			f2 = next;
+			next = f1 + f2;
+		}
+		return (0);
 	}
-	return (0);
-}
