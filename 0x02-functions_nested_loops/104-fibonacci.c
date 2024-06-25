@@ -30,5 +30,6 @@ int main(void)
 		n2 += m2;
 		m2 = n2 - m2;
 	}
+	printf("\n");
 	return (0);
 }
