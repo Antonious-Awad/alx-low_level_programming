@@ -2,7 +2,7 @@
 #include <math.h>
 /**
  * main - Entry Point
- * @n: desc
+ * Return: Always 0
  */
 
 int main(void)
