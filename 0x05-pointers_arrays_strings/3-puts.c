@@ -6,5 +6,11 @@
 
 void _puts(char *str)
 {
-	puts(str);
+	unsigned long int count = 0;
+
+	while (*(str + count) != '\0')
+	{
+		_putchar(str[count]);
+	}
+	_putchar('\n');
 }
