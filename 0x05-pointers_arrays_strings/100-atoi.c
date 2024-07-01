@@ -1,7 +1,8 @@
 #include "main.h"
 /**
- * _atoi -
- * @n: desc
+ * _atoi - turns string into an integer
+ * @s: string pointer
+ * Return: Extracted numbers from string
  */
 
 int _atoi(char *s)
@@ -9,8 +10,7 @@ int _atoi(char *s)
 	int sign = 1;
 	unsigned int res = 0;
 
-	do
-	{
+	do {
 		if (*s == '-')
 		{
 			sign *= -1;
