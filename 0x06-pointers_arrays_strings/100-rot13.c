@@ -2,6 +2,7 @@
 /**
  * rot13 - rotate by 13 places
  * @s: character pointer
+ * Return: character pointer
  */
 
 char *rot13(char *s)
@@ -18,6 +19,7 @@ char *rot13(char *s)
 			if (s[i] == alpha[j])
 			{
 				s[i] = rot13[j];
+				break;
 			}
 		}
 	}
