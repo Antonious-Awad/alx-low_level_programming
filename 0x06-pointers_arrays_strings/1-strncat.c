@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strncat - concats using n bytes from src
+ * _strncat - concat using n bytes from src
  * @dest: end result
  * @src: input string
  * @n: bytes to be used from src
@@ -9,6 +9,12 @@
 
 char *_strncat(char *dest, char *src, int n)
 {
-	strncat(dest, src, n);
+	int destLen = strlen(dest), i;
+
+	for (i = 0; src[i] != '\0' && i < n; i++)
+	{
+		dest[destLen++] = src[i];
+	}
+	dest[destLen] = '\0';
 	return (dest);
 }
