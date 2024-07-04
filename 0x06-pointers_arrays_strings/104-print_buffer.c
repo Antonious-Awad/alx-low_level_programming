@@ -31,6 +31,7 @@ void print_buffer(char *b, int size)
 		for (columnPosition = 0; columnPosition < rowSize; columnPosition++)
 		{
 			char character = b[hex + columnPosition];
+
 			if (character < ' ' || character > '~')
 			{
 				character = '.';
@@ -38,8 +39,6 @@ void print_buffer(char *b, int size)
 			printf("%c", character);
 		}
 		printf("\n");
-
 		hex += 10;
 	}
-	return;
 }
