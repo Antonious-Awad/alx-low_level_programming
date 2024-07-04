@@ -49,7 +49,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			n2Val = 0;
 		else
 			n2Val = n2[n2Iter] - '0';
-		iterationSum = n1Val + n2Val;
+		iterationSum = n1Val + n2Val + overflow;
 		if (iterationSum >= 10)
 			overflow = 1;
 		else
