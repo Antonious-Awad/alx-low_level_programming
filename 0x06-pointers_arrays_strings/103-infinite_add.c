@@ -11,7 +11,7 @@ void reverse_string(char *a)
 	int n = strlen(a);
 	int end = n - 1, start = 0, temp;
 
-	while (start < n / 2)
+	while (start < end)
 	{
 		temp = *(a + start);
 		*(a + start) = *(a + end);
