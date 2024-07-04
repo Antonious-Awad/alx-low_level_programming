@@ -10,11 +10,11 @@ void print_buffer(char *b, int size)
 
 	if (size <= 0)
 	{
-		printf("%s\n", b);
+		printf("\n");
 		return;
 	}
 
-	while (hex < size)
+	for (; hex < size; hex += 10)
 	{
 		printf("%08x: ", hex);
 		rowSize = size - hex < 10 ? size - hex : 10;
@@ -39,6 +39,5 @@ void print_buffer(char *b, int size)
 			printf("%c", character);
 		}
 		printf("\n");
-		hex += 10;
 	}
 }
