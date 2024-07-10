@@ -6,5 +6,5 @@
   "files.associations": {
     "main.h": "c"
   },
-  "cSpell.words": ["diagsums"]
+  "cSpell.words": ["diagsums", "wildcmp"]
 }
