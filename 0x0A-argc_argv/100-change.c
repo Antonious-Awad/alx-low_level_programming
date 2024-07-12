@@ -17,7 +17,7 @@ int main(int argc, char **argv)
 	}
 	total = atoi(argv[1]);
 
-	while (total)
+	while (total > 0)
 	{
 		change++;
 		if (total - 25 >= 0)
