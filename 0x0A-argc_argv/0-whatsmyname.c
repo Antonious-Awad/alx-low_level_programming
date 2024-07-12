@@ -1,7 +1,9 @@
 #include "main.h"
 /**
- * func - desc
- * @n: desc
+ * main - main function
+ * @argc: argument count
+ * @argv: argument values
+ * Return: always 0
  */
 
 int main(int __attribute__((unused)) argc, char **argv)
