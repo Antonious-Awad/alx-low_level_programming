@@ -8,7 +8,7 @@
 
 int main(int argc, char **argv)
 {
-	int total, change;
+	int total, change = 0;
 
 	if (argc != 2)
 	{
