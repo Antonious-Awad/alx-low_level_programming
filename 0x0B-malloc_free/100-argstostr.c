@@ -3,6 +3,7 @@
  * argstostr - turns arguments to a string
  * @ac: argument count
  * @av: argument values
+ * Return: concatenated arguments
  */
 char *argstostr(int ac, char **av)
 {
