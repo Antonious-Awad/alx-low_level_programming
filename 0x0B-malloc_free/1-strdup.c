@@ -8,14 +8,15 @@
 
 char *_strdup(char *str)
 {
+	char *dup;
+	int len, i;
+
 	if (str == NULL)
 	{
 		return (NULL);
 	}
 
-	char *dup;
-	int len = strlen(str), i;
-
+	len = strlen(str);
 	dup = malloc(len * sizeof(*dup));
 	if (dup == NULL)
 	{
