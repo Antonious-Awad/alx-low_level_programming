@@ -39,24 +39,24 @@ char **strtow(char *str)
 	words = word_counter(str);
 	if (words == 0)
 		return (NULL);
-	res = malloc(sizeof(char *) * (words + 1));
+	res = (char **)malloc(sizeof(char *) * (words + 1));
 	if (res == NULL)
 		return (NULL);
 
-	for (i = 0; str[i] < strLen; i++)
+	for (i = 0; i <= strLen; i++)
 	{
 		if (str[i] == ' ' || str[i] == '\0')
 		{
 			if (wordCount)
 			{
 				end = i;
-				tmp = malloc(sizeof(**res) * wordCount + 1);
+				tmp = malloc(sizeof(**res) * (wordCount + 1));
 				if (tmp == NULL)
 					return (NULL);
 
 				while (start < end)
 				{
-					*tmp++ = str[start];
+					*tmp++ = str[start++];
 				}
 				*tmp = '\0';
 				res[resItr++] = tmp - wordCount;
