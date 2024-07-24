@@ -24,13 +24,13 @@ int main(int argc, char **argv)
 	if (!op)
 	{
 		printf("Error\n");
-		exit(98);
+		exit(99);
 	}
 
 	if ((sign == '/' || sign == '%') && n2 == 0)
 	{
 		printf("Error\n");
-		exit(98);
+		exit(100);
 	}
 
 	result = op(n1, n2);
