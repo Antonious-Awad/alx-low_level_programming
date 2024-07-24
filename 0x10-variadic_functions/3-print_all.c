@@ -9,40 +9,39 @@
 void print_all(const char *const format, ...)
 {
 	unsigned int count;
-	char *s;
+	char *s, *sep;
 	va_list inputPtr;
 
 	va_start(inputPtr, format);
 
 	count = 0;
+	sep = "";
 
 	while (format && format[count])
 	{
 		switch (format[count])
 		{
 		case 'c':
-			printf("%c", va_arg(inputPtr, int));
+			printf("%s%c", sep, va_arg(inputPtr, int));
 			break;
 		case 'i':
-			printf("%d", va_arg(inputPtr, int));
+			printf("%s%d", sep va_arg(inputPtr, int));
 			break;
 		case 'f':
-			printf("%f", va_arg(inputPtr, double));
+			printf("%s%f", sep, va_arg(inputPtr, double));
 			break;
 		case 's':
 			s = va_arg(inputPtr, char *);
 			if (!s)
 				s = "(nil)";
-			printf("%s", s);
+			printf("%s%s", sep, s);
 			break;
 		default:
 			count++;
 			continue;
 		}
-		if (format[count + 1] != '\0')
-			break;
 
-		printf(", ");
+		sep = ", ";
 		count++;
 	}
 	va_end(inputPtr);
