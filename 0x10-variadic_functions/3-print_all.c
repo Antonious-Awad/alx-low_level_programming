@@ -20,16 +20,20 @@ void print_all(const char *const format, ...)
 		switch (format[count])
 		{
 		case 'c':
-			printf("%c", va_arg(inputPtr, char));
+			printf("%c", va_arg(inputPtr, int));
 			break;
 		case 'i':
 			printf("%d", va_arg(inputPtr, int));
 			break;
 		case 'f':
-			printf("%f", va_arg(inputPtr, float));
+			printf("%f", va_arg(inputPtr, double));
 			break;
 		case 's':
 			printf("%s", va_arg(inputPtr, char *));
+			break;
+		default:
+			count++;
+			continue;
 			break;
 		}
 		if (format[count + 1] == '\0')
