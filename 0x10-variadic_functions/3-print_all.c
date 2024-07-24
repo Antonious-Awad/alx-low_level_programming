@@ -37,9 +37,11 @@ void print_all(const char *const format, ...)
 			break;
 		}
 		if (format[count + 1] == '\0')
+		{
 			printf("\n");
-		else
-			printf(", ");
+			continue;
+		}
+		printf(", ");
 		count++;
 	}
 	va_end(inputPtr);
