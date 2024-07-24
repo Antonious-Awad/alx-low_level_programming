@@ -38,15 +38,11 @@ void print_all(const char *const format, ...)
 		default:
 			count++;
 			continue;
-			break;
 		}
-		if (format[count + 1] == '\0')
-		{
-			printf("\n");
-			break;
-		}
-		printf(", ");
+		if (format[count] != '\0')
+			printf(", ");
 		count++;
 	}
 	va_end(inputPtr);
+	printf("\n");
 }
