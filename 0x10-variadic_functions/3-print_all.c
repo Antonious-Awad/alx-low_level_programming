@@ -39,7 +39,7 @@ void print_all(const char *const format, ...)
 		if (format[count + 1] == '\0')
 		{
 			printf("\n");
-			continue;
+			break;
 		}
 		printf(", ");
 		count++;
