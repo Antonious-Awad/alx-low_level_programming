@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * main - entry point
  * @argc: argument count
@@ -18,7 +19,7 @@ int main(int argc, char **argv)
 		exit(1);
 	}
 
-	bytes = argv[1];
+	bytes = atoi(argv[1]);
 
 	if (bytes < 0)
 	{
