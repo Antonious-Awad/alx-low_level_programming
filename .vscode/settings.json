@@ -5,7 +5,8 @@
   "editor.detectIndentation": false,
   "editor.insertSpaces": false,
   "files.associations": {
-    "main.h": "c"
+    "main.h": "c",
+    "function_pointers.h": "c"
   },
   "cSpell.words": ["diagsums", "strtow", "wildcmp"]
 }
