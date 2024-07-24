@@ -9,6 +9,7 @@
 void print_all(const char *const format, ...)
 {
 	unsigned int count;
+	char *s;
 	va_list inputPtr;
 
 	va_start(inputPtr, format);
@@ -29,7 +30,10 @@ void print_all(const char *const format, ...)
 			printf("%f", va_arg(inputPtr, double));
 			break;
 		case 's':
-			printf("%s", va_arg(inputPtr, char *));
+			s = va_arg(inputPtr, char *);
+			if (!s)
+				s = "(nil)";
+			printf("%s", s);
 			break;
 		default:
 			count++;
