@@ -13,10 +13,10 @@
 typedef struct list_t
 {
 	char *str;
-	int len;
-	list *next;
-} list;
+	unsigned int len;
+	struct list_t *next;
+} list_t;
 
-size_t print_list(const list *h);
+size_t print_list(const list_t *h);
 
 #endif
