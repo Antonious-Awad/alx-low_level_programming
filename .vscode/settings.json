@@ -6,7 +6,8 @@
   "editor.insertSpaces": false,
   "files.associations": {
     "main.h": "c",
-    "function_pointers.h": "c"
+    "function_pointers.h": "c",
+    "lists.h": "c"
   },
-  "cSpell.words": ["diagsums", "strtow", "wildcmp"]
+  "cSpell.words": ["diagsums", "listint", "nodeint", "strtow", "wildcmp"]
 }
