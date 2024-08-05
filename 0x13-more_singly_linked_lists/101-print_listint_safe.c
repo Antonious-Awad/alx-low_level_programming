@@ -25,7 +25,7 @@ size_t print_listint_safe(const listint_t *head)
 		{
 			if (safety_node == tmp)
 			{
-				printf("--> [%p] %d\n", (void *)tmp, tmp->n);
+				printf("-> [%p] %d\n", (void *)tmp, tmp->n);
 				return (counter);
 			}
 			safety_node = safety_node->next;
