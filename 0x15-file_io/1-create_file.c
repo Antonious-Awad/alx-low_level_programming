@@ -1,5 +1,4 @@
 #include "main.h"
-#include <strings.h>
 #include <fcntl.h>
 /**
  * create_file - creates a file
@@ -16,7 +15,8 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 
 	if (text_content)
-		len = strlen(text_content);
+		for (len; text_content[len]; len++)
+			;
 
 	openBuff = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
 	writeBuff = write(openBuff, text_content, len);
