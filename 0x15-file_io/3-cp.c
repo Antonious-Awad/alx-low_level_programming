@@ -15,7 +15,7 @@ char *create_buf(char *file_name)
 
 	if (!buffer)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s", file_name);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_name);
 		exit(99);
 	}
 	return (buffer);
@@ -63,14 +63,14 @@ int main(int argc, char *argv[])
 	do {
 		if (from == -1 || readBuf == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s", argv[1]);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			free(buffer);
 			exit(98);
 		}
 		writeBuf = write(to, buffer, readBuf);
 		if (to == -1 || writeBuf == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s", argv[2]);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			free(buffer);
 			exit(99);
 		}
