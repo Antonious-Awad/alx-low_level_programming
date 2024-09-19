@@ -2,7 +2,7 @@
   "ALX Snippet": {
     "prefix": "alx",
     "body": [
-      "#include \"main.h\"",
+      "#include \"${1:main}.h\"",
       "/**",
       " * func - desc",
       " * @n: desc",

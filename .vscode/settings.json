@@ -9,5 +9,13 @@
     "function_pointers.h": "c",
     "lists.h": "c"
   },
-  "cSpell.words": ["diagsums", "listint", "nodeint", "strtow", "wildcmp"]
+  "cSpell.words": [
+    "diagsums",
+    "dlistint",
+    "dnodeint",
+    "listint",
+    "nodeint",
+    "strtow",
+    "wildcmp"
+  ]
 }
