@@ -10,7 +10,7 @@
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	unsigned int counter = 0;
-	dlistint_t *curr = *h, *new = NULL, *next;
+	dlistint_t *curr = *h, *new = NULL;
 
 	if (!curr)
 		return (NULL);
