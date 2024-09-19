@@ -16,4 +16,14 @@ function isPalin(i) {
   return i.toString() == i.toString().split("").reverse().join("");
 }
 
-console.log(largestPalindrome());
+const fs = require("node:fs");
+
+const content = `${largestPalindrome()}`;
+
+fs.writeFile("102-result", content, (err) => {
+  if (err) {
+    console.error(err);
+  } else {
+    console.log("file written");
+  }
+});
