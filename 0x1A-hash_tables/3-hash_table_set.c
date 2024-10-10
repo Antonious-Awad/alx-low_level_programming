@@ -1,5 +1,5 @@
 #include "hash_tables.h"
-#include "string.h"
+#include <string.h>
 /**
  * hash_table_set - adds a new node to the hashtable
  * @ht: hashtable pointer
@@ -11,13 +11,13 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_node_t *new;
-	char *value_cpy;
+	char *value_cpy = NULL;
 	unsigned long int index, i;
 
 	if (!ht || !key || *key == '\0' || !value)
 		return (0);
 
-	strcpy(value_cpy, value);
+	value_cpy = strdup(value);
 
 	if (!value_cpy)
 		return (0);
@@ -43,7 +43,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	}
 
-	strcpy(new->key, key);
+	new->key = strdup(key);
 	if (new->key == NULL)
 	{
 		free(new);
